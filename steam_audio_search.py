@@ -37,7 +37,7 @@ def ScrapeSearch():
         WriteResultsToFile()
 
 def WriteResultsToFile():
-    with open(pathToFile + '/' + outputFileName, 'w') as outputFile:
+    with open(pathToFile + '/' + outputFileName, 'w', encoding='utf8') as outputFile:
         outputFile.write('The language ' + language + ' was supported in the following games:\r\n')
         supportedGameString = '';
         for game in languageSupported:
